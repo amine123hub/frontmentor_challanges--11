@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: dark light;
+    scroll-behavior: smooth;
+}
+
+:root {
+     /* Primary */
+
+--Green-light-200: hsl(148, 38%, 91%);
+--Green-md-600: hsl(169, 82%, 27%);
+--Red: hsl(0, 66%, 54%);
+
+ /* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Grey-500: hsl(186, 15%, 59%);
+--Grey-900: hsl(187, 24%, 22%);
+
+/* typography */
+--fs-xl: clamp(1.85rem, 2.1rem, 2.5rem);
+--fs-l: clamp(1.3rem, 1.6rem, 1.9rem);
+--fs-md: clamp(.85rem, 1rem, 1.1rem);
+--fs-sm: clamp(.75rem, .9rem, 1rem);
+--fw-700: 700;
+--fw-400: 400;
+
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    max-width: 100%;
+    background-color: var(--Green-light-200);
+    font-family: "Karla", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:checked {
+    accent-color: var(--Green-md-600);
+}
+
+input:valid {
+    border: 2px solid var(--Green-md-600);
+}
+
+input:invalid {
+    border: 2px solid var(--Red);
+}
+
+input:user-valid,
+textarea:user-valid {
+    border-color: var(--Green-md-600);
+    background: var(--Green-light-200);
+}
+input:user-invalid,
+textarea:user-invalid {
+    border-color: var(--Red);
+    background: hsl(0, 66%, 80%);
+}
+
+
+input {
+     width: 90%;
+    padding: .7rem;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 50%);
+    outline: none;
+    cursor: pointer;
+}
+
+label {
+    font-weight: var(--fw-400);
+    padding-left: .4rem;
+    font-size: var(--fs-sm);
+    
+}
+
+.contact-form {
+    width: 40rem;
+    aspect-ratio: 1/1;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 14px;
+    padding: 1rem;
+    
+}
+
+.name-inputs {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.name-inputs .name-input {
+    flex: 1;
+    position: relative;
+    width: 100%;
+}
+
+.name-inputs .name-input > *  {
+    margin-block: .2rem;
+}
+
+.email {
+    margin-block: 1rem;
+    width: 100%;
+}
+
+.email input {
+    width: 95%;
+}
+
+.email > * {
+    margin-block: .2rem;
+}
+
+.radio-input {
+    position: relative;
+    width: 100%;   
+}
+
+.radio-input > * {
+    margin-block: 1rem;
+}
+
+.querry-btn {
+    position: relative;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.querry-btn .radio {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 8px;
+    padding: .7rem;
+}
+
+
+.querry-btn .radio input {
+    width: 25%;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.message textarea {
+    width: 95%;
+    resize: none;
+    line-height: 3lh;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 50%);
+}
+
+.requirement {
+    margin-block: 1.5rem;
+    width: 95%;
+    display: flex;
+}
+
+.requirement input {
+    width: 10%;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-inline: auto;
+    
+}
+
+.submit-btn  input {
+    width: 95%;
+    background-color: var(--Green-md-600);
+    color: var(--Green-light-200);
+    cursor: pointer;
+    font-weight: var(--fw-700);
+    transition: .3s ease;
+    
+}
+
+.submit-btn  input:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 380px) {
+    .name-inputs {
+    flex-direction: column;
+}
+
+.email input {
+    width: 90%;
+}
+
+
+}
+
+
