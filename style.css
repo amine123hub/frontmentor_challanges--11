@@ -7,7 +7,7 @@
 }
 
 html {
-    color-scheme: dark light;
+    
     scroll-behavior: smooth;
 }
 
@@ -52,21 +52,21 @@ input:checked {
     accent-color: var(--Green-md-600);
 }
 
-input:valid {
+input:valid:not(:focus):not(:placeholder-shown) {
     border: 2px solid var(--Green-md-600);
 }
 
-input:invalid {
+input:invalid:not(:focus):not(:placeholder-shown) {
     border: 2px solid var(--Red);
 }
 
-input:user-valid,
-textarea:user-valid {
+input:user-valid:not(:focus):not(:placeholder-shown),
+textarea:user-valid:not(:focus):not(:placeholder-shown) {
     border-color: var(--Green-md-600);
     background: var(--Green-light-200);
 }
-input:user-invalid,
-textarea:user-invalid {
+input:user-invalid:not(:focus):not(:placeholder-shown),
+textarea:user-invalid:not(:focus):not(:placeholder-shown) {
     border-color: var(--Red);
     background: hsl(0, 66%, 80%);
 }
@@ -136,6 +136,10 @@ label {
 
 .radio-input > * {
     margin-block: 1rem;
+}
+
+.radio-input > p {
+    font-size: var(--fs-sm);
 }
 
 .querry-btn {
